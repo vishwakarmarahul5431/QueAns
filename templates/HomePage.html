@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+
+
+    <style>
+:root {
+    --main-color: #b92b27;
+    --main-color-darker: #941e1a;
+    --white: #ffffff;
+    --dropdown-radius: 50px;
+  }
+.bg-second-color {
+    background-color: rgb(233, 233, 233);
+}
+.nav-link svg {
+    width: 45px;
+    height: 45px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.profile {
+    width: 45px;
+    height: 45px;
+    padding: 7px;
+}
+
+.post-profile {
+    width: 55px;
+    height: 55px;
+    padding: 7px;
+}
+
+.nav-link:hover {
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+}
+
+.search-icon {
+    padding-left: 25px;
+    background: url("src/outline_search_black_24dp.png") no-repeat left;
+    background-size: 20px;
+  }
+
+#button1 {
+    border-bottom-left-radius: var(--dropdown-radius);
+    border-top-left-radius: var(--dropdown-radius);
+}
+
+#button1:hover {
+    background-color: var(--main-color-darker);
+}
+
+#button2 {
+    border-bottom-right-radius: var(--dropdown-radius);
+    border-top-right-radius: var(--dropdown-radius);
+    border-left-style: solid;
+    border-left-color: rgb(83, 83, 83);
+    border-width: 1px;
+    color: white;
+}
+
+#left-list {
+    margin-left: 20px;
+}
+
+#left-list a {
+    text-decoration: none;
+    padding: 5px;
+    color: gray;
+    font-size: 13px;
+}
+
+#left-list a:hover {
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+
+#left-list img {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.hover-dark:hover {
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+
+.left-button {
+    border-bottom-left-radius: var(--dropdown-radius);
+    border-top-left-radius: var(--dropdown-radius);
+}
+
+.right-button {
+    border-bottom-right-radius: var(--dropdown-radius);
+    border-top-right-radius: var(--dropdown-radius);
+}
+
+.post-button-bg {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.post-button:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+</style>
+
+
+
+
+     <div class="bg-light pt-4">
+                <div class="container mb-5">
+                    <div class="row">
+                        <div id="left-list" class="col-2 d-flex flex-column">
+                            <a class="bg-second-color" href="#">
+                                <span class="rounded ">+</span>
+                                <span>Create Space</span>
+                            </a>
+                            <a href="#">
+                            <span class="position-relative me-auto">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span class="position-absolute top-0 start-50 translate-middle ms-2 p-1 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </span>
+                                <span>Work</span>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span>Job Search</span>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span>Carrer Advice</span>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span>Job and Career</span>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span>Salary and Wages</span>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'images/user1.jpg' %}">
+                                <span>News</span>
+                            </a>
+
+
+                        </div>
+                        <div class="col-7">
+                            <div class="bg-white border-gray">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="profile rounded-circle " src="{% static 'images/user1.jpg' %}">
+                                        <input  class="w-75 border-gray text-gray-dark rounded-pill bg-light ps-2 text-start" type="button" value="What do you want to ask or share?">
+                                    </div>
+                                </div>
+                                <div class="row text-gray-darker pb-2 ps-4 pe-4">
+                                    <div class="col text-center border-end hover-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83l-.59.59L12 20.17l-1.59-1.59-.58-.58H5V4h14v14zm-8-3h2v2h-2zm1-8c1.1 0 2 .9 2 2 0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4S8 6.79 8 9h2c0-1.1.9-2 2-2z"/></svg>
+                                        <span>Ask</span>
+                                    </div>
+                                    <div class="col text-center border-end hover-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><rect fill="none" height="24" width="24"/><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"/></svg>
+                                        <span>Answer</span>
+                                    </div>
+                                    <div class="col text-center hover-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"/></svg>
+                                        <span>Post</span>
+                                    </div>
+                                </div>
+                            </div>
+{% for posts in post %}
+                            <div class="bg-white border-gray mt-4" style="padding: 20px">
+                                <div class="d-flex pt-2">
+                                    <div class="col d-flex">
+                                        <img class="post-profile rounded-circle " src="{% static 'images/user1.jpg' %}">
+                                        <div class="d-flex flex-column">
+                                            <span class="fw-bold fs-6">{{ posts.author.first_name }} {{ posts.author.last_name }} <small><a href="#">Follow</a></small></span>
+                                            <span class="text-gray-darker fs-6">Job title and position</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2 text-gray-darker">
+                                        <button class="btn rounded-circle hover-dark p-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="post-body pt-2 ps-3">
+                                    <div class="post-title fw-bold">
+                                        <a class="text-decoration-none text-black" href="#">
+                                            {{ posts.question }}
+                                        </a>
+                                    </div>
+                                    <div class="post-text pt-1">
+                                        {{ posts.answer }}
+
+                                    </div>
+                                </div>
+                                <div class="post-image pt-2">
+                                    <img class="img-fluid" src="/{{ BASIC_DIR }}/{{posts.image}}">
+                                    <img  style="height: 70px" src="{{ posts.images.url }}">
+                                </div>
+                                <div class="post-footer p-2">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="left-button post-button bg-second-color border-0 text-black p-1">
+                                            <img src="{% static 'images/up.png' %}" width="20" class="ms-2">
+                                            15
+                                        </button>
+                                        <button type="button" class="right-button post-button bg-second-color border-0 text-black p-1">
+                                            <img src="{% static 'images/down.png' %}" width="20" class="me-2">
+
+                                        </button>
+                                    </div>
+                                    <button type="button" class="post-button post-button-bg border-0 rounded-circle text-black p-1">
+                                        <img src="{% static 'images/comment.png' %}" width="20" class="">
+                                        1
+                                    </button>
+                                    <button type="button" class="post-button post-button-bg border-0 rounded-circle text-black p-1">
+                                        <img src="{% static 'images/refresh.png' %}" width="25" class="p-1">
+                                        123
+                                    </button>
+                                </div>
+                            </div>
+
+{%  endfor %}
+
+
+                        </div>
+                        <div class="col">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <div class="">
+                                        <img src="{% static 'images/user1.jpg' %}" width="20" height="20" class="rounded">
+                                    </div>
+                                    <div class="ps-2 lh-1">
+                                        <div class="fw-bold">Advance AI</div>
+                                        <div class="text-secondary fw-light">A space for advances in AI, Blockchaine, Science, Space and startup</div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fade-transform">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Add Questions</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Create Post</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Message</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br/>
+                            <div class="jumbotron jumbotron-fluid">
+                                <div class="container bg-primary"><br/>
+
+                                    <h5 class="text-white">Tips  on getting good answer quick.</h5>
+                                    <h6 class="lead text-white">
+                                        <ul>
+                                            <li>Make sure your question has not been asked already</li>
+                                            <li>Keep Your qestion short and to the point</li>
+                                            <li>Double-check grammar and spelling</li>
+                                        </ul>
+                                        </p><br/>
+
+                                </div>
+                            </div>
+                            <div class="container mt-4">
+                                <img src="{% static 'images/user1.jpg' %}"style="width: 5%;height: 5%; border-radius: 50%;float: left;">
+                                <div class="ps-5 mt-4">
+                                    <form action="#" class="ps-3 mt-2">
+
+                                        <select name="userMode" id="lang" class="mt-2">
+                                            <option value="javascript">Public</option>
+                                            <option value="php">Private</option>
+
+                                        </select>
+
+                                    </form>
+                                </div>
+                            </div><br/>
+
+                            <input type="Text" id="" class="form-control" placeholder="Ask Your Question?" aria-describedby="">
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Sorry Under Development</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <h1>Sorry For Inconvience We are regreat to inform that we are not moving further process so please wait for some time because it is in Development phase ..</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary border-rounded">Add Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

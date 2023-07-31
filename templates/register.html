@@ -1,0 +1,96 @@
+{% include 'cdnlines.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<div class="container" style="margin-top: 50px;">
+
+    <div class="row">
+        <div class="offset-md-3 col-md-6  " style="border: 2px solid red;padding-top: 20px;padding-left: 80px;padding-right: 80px;padding-bottom: 30px;">
+          <h3 class="text-center text-danger"><b>Sign Up</b> </h3>
+            {% include 'alert.html' %}
+
+
+            <form method="POST" >
+                {% csrf_token %}
+
+
+                <label>Enter First Name:</label>
+                {{ form.first_name }}
+                <label>Enter Last Name:</label>
+                {{ form.last_name }}
+                 <label>Username:</label>
+                {{ form.username }}
+                <label>Enter Email:</label>
+                {{ form.email }}
+                 <label>Enter Password:</label>
+                {{ form.password1 }}
+                 <label>Enter Confirm Password:</label>
+                {{ form.password2 }}
+
+
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <input type="submit" value="SignUp" class="btn btn-success btn-sm">
+                    <input type="reset" value="Clear" class="btn btn-danger btn-sm">
+                </div>
+
+
+            </form>
+            <div style="margin-top: 30px;">
+            <a href="{% url 'login' %}">Have QueAns Account?Log In</a>
+            <a href="{% url 'homepage' %}" style="float: right">Main Page</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <script>
+        var form_fields=document.getElementsByTagName('input')
+        form_fields[1].placeholder = 'First Name...'
+        form_fields[1].className='form-control'
+
+        form_fields[2].placeholder = 'Last Name...'
+        form_fields[2].className='form-control'
+
+        form_fields[3].placeholder = 'Username...'
+        form_fields[3].className='form-control'
+
+        form_fields[4].placeholder = 'Email...'
+        form_fields[4].className='form-control'
+
+        form_fields[5].placeholder = 'Password...'
+        form_fields[5].className='form-control'
+
+
+
+        form_fields[6].placeholder = 'Confirm Password...'
+        form_fields[6].className='form-control'
+
+
+        {#var form_field=document.getElementsByTagName("input")#}
+    {#form_fields[1].className#}
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

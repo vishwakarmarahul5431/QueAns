@@ -1,0 +1,16 @@
+:root{
+    --main-color:#b92b27;
+    --main-color-darker:#941e11a;
+    --white: #221b1b;
+}
+ .text-main-color{
+    color:var(--main-color)
+ }
+ .border-main-color{
+    border-bottom-style:solid;
+    border-width: 4px;
+    border-color: var(--main-color);
+ }
+
+
+
